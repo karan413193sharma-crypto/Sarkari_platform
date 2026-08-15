@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-void text-ink font-body;
+  }
+}
+
+@layer components {
+  /* Core glass panel used across cards, sidebar, nav */
+  .glass-panel {
+    @apply bg-glass backdrop-blur-xl border border-glass-border shadow-glass;
+  }
+
+  .glass-panel-strong {
+    @apply bg-glass-strong backdrop-blur-2xl border border-glass-border shadow-glass;
+  }
+
+  .text-gradient {
+    @apply bg-accent-gradient bg-clip-text text-transparent;
+  }
+}
