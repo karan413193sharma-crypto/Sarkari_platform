@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "@/store/Provider";
-import AuthModal from "@/components/auth/AuthModal";
+import AuthModal from "@/components/auth/Authmodal";
 import AuthListener from "@/components/auth/AuthListener";
 import UserMenu from "@/components/layout/UserMenu";
 
