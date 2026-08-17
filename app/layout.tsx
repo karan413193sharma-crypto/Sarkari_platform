@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "@/store/Provider";
+import AuthModal from "@/components/auth/AuthModal";
+import AuthListener from "@/components/auth/AuthListener";
+import UserMenu from "@/components/layout/UserMenu";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -29,7 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>
+          <AuthListener />
+          <UserMenu />
+          {children}
+          <AuthModal />
+        </StoreProvider>
       </body>
     </html>
   );

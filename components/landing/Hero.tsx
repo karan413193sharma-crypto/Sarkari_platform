@@ -1,6 +1,11 @@
+"use client";
+
 import { ArrowUpRight, Sparkles } from "lucide-react";
+import { useEligibilityClick } from "@/lib/hooks/useEligibilityClick";
 
 export default function Hero() {
+  const handleEligibilityClick = useEligibilityClick();
+
   return (
     <section id="home" className="relative overflow-hidden px-6 pt-20 pb-24 md:px-14 md:pt-28">
       <div className="glass-panel mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs text-ink-muted">
@@ -21,8 +26,8 @@ export default function Hero() {
       </p>
 
       <div className="mt-10 flex flex-wrap items-center gap-4">
-        <a
-          href="#eligibility"
+        <button
+          onClick={handleEligibilityClick}
           className="group flex items-center gap-2 rounded-full bg-accent-gradient px-6 py-3 text-sm font-medium text-ink shadow-glow transition-transform hover:scale-[1.03]"
         >
           Check my eligibility
@@ -30,7 +35,7 @@ export default function Hero() {
             size={16}
             className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
-        </a>
+        </button>
         <a
           href="#exams"
           className="glass-panel rounded-full px-6 py-3 text-sm font-medium text-ink-muted transition-colors hover:text-ink"

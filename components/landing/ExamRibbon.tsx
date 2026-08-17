@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const CATEGORIES = [
   { code: "UPSC", name: "Civil Services", exams: "IAS · IFS · IPS" },
   { code: "SSC", name: "Staff Selection", exams: "CGL · CHSL · MTS" },
@@ -23,9 +25,9 @@ export default function ExamRibbon() {
 
       <div className="flex flex-wrap gap-x-0 gap-y-6 md:flex-nowrap md:gap-x-[-40px]">
         {CATEGORIES.map((cat, i) => (
-          <a
+          <Link
             key={cat.code}
-            href="#eligibility"
+            href={`/exams?category=${cat.code}`}
             style={{
               transform: `rotate(${(i - 2.5) * 4}deg)`,
               marginLeft: i === 0 ? 0 : "-2.5rem",
@@ -40,7 +42,7 @@ export default function ExamRibbon() {
             </span>
             <p className="mt-3 text-sm font-medium text-ink">{cat.name}</p>
             <p className="mt-1 text-xs text-ink-faint">{cat.exams}</p>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

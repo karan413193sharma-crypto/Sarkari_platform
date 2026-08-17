@@ -21,4 +21,9 @@
   .text-gradient {
     @apply bg-accent-gradient bg-clip-text text-transparent;
   }
+
+  .input-field {
+    @apply w-full rounded-lg border border-glass-border bg-glass px-3.5 py-2.5 text-sm text-ink outline-none;
+    @apply placeholder:text-ink-faint focus:border-accent-to;
+  }
 }

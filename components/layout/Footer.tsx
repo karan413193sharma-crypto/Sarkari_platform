@@ -1,4 +1,10 @@
+"use client";
+
+import { useEligibilityClick } from "@/lib/hooks/useEligibilityClick";
+
 export default function Footer() {
+  const handleEligibilityClick = useEligibilityClick();
+
   return (
     <footer id="about" className="mt-8 px-6 py-10 md:px-14">
       <div className="glass-panel rounded-xl2 px-8 py-10 text-center">
@@ -9,12 +15,12 @@ export default function Footer() {
           It takes under a minute to add your qualification and see your
           matches — no account required to look.
         </p>
-        <a
-          href="#eligibility"
+        <button
+          onClick={handleEligibilityClick}
           className="mt-6 inline-block rounded-full bg-accent-gradient px-6 py-3 text-sm font-medium text-ink shadow-glow"
         >
           Check my eligibility
-        </a>
+        </button>
       </div>
 
       <p className="mt-8 text-center text-xs text-ink-faint">

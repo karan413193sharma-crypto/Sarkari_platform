@@ -17,7 +17,9 @@ export interface Exam {
   id: string;
   slug: string;
   name: string;
-  category: string; // e.g. "UPSC", "SSC", "Banking"
+  category: string; // display name e.g. "Civil Services"
+  categoryCode: string; // short code used for filter tabs e.g. "UPSC"
+  description: string;
   minQualification: QualificationLevel;
   minAge: number;
   maxAge: number;
