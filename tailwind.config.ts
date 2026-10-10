@@ -44,6 +44,30 @@ const config: Config = {
       borderRadius: {
         xl2: "1.25rem",
       },
+      keyframes: {
+        "hero-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "hero-glow": {
+          "0%, 100%": { opacity: "0.35", transform: "scale(1)" },
+          "50%": { opacity: "0.65", transform: "scale(1.06)" },
+        },
+        "hero-kenburns": {
+          "0%": { transform: "scale(1.05)" },
+          "100%": { transform: "scale(1.12)" },
+        },
+        "hero-slide-up": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "hero-float": "hero-float 6s ease-in-out infinite",
+        "hero-glow": "hero-glow 5s ease-in-out infinite",
+        "hero-kenburns": "hero-kenburns 18s ease-in-out infinite alternate",
+        "hero-slide-up": "hero-slide-up 0.7s ease-out",
+      },
     },
   },
   plugins: [],

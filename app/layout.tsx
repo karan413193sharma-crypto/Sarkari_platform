@@ -5,6 +5,7 @@ import StoreProvider from "@/store/Provider";
 import AuthModal from "@/components/auth/Authmodal";
 import AuthListener from "@/components/auth/AuthListener";
 import UserMenu from "@/components/layout/UserMenu";
+import ChatWidget from "@/components/ChatWidget";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           <AuthListener />
           <UserMenu />
           {children}
+          <ChatWidget />
           <AuthModal />
         </StoreProvider>
       </body>
